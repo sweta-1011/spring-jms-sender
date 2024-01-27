@@ -12,7 +12,7 @@ public class MessageProducerApp {
     /*@Autowired
     static Sender sender;*/
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(SenderConfig.class);
         Sender sender = context.getBean(Sender.class);

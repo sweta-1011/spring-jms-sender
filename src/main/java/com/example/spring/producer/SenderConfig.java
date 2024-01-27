@@ -24,7 +24,7 @@ public class SenderConfig {
     private String dest;
 
     @Bean
-    public ConnectionFactory senderActiveMQConnectionFactory(){
+    public ConnectionFactory senderActiveMQConnectionFactory() {
         ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory();
         //activeMQConnectionFactory.setBrokerURL("tcp://localhost:61616");
         activeMQConnectionFactory.setBrokerURL(brokerUrl);

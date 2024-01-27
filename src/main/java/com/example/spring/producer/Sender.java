@@ -20,14 +20,14 @@ public class Sender {
     @Autowired
     private JmsTemplate jmsTemplate;
 
-    public void sendMessage(final Product product){
+    public void sendMessage(final Product product) {
 
         jmsTemplate.send(new MessageCreator() {
 
             public Message createMessage(Session session) throws JMSException {
 
                 ObjectMessage objectMessage = session.createObjectMessage(product);
-                LOGGER.info("sending message='{}'",product);
+                LOGGER.info("sending message='{}'", product);
                 return objectMessage;
             }
         });
